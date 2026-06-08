@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - UNILUK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<nav>
+
+<a href="index.html">Accueil</a>
+<a href="about.html">À propos</a>
+<a href="faculties.html">Facultés</a>
+<a href="administration.html">Administration</a>
+<a href="campus.html">Campus</a>
+<a href="admission.html">Admission</a>
+<a href="instutition.html">Nos institutions</a>
+<a href="centre.html">Centre de recherche</a>
+<a href="news.html">Actualités</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+</header>
+
+<section class="hero">
+<h1>Contact</h1>
+<p>Université Adventiste de Lukanga</p>
+</section>
+
+<div class="container">
+<div class="card">
+<h2>Contact</h2>
+<section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Contact & admissions</h2>
+            <p>Écrivez-nous pour toute information (inscriptions, documents, horaires...).</p>
+          </div>
+        </div>
+
+        <div class="contact" role="form">
+          <div class="card">
+            <h3>Coordonnées</h3>
+            <p class="section-description" style="margin:0;color:rgba(83, 103, 151, 0.72);line-height:1.8">
+              <br/>
+              <b>Adresse :</b> RDC,Nord-kivu,Lubero,Lukanga
+              <br/>
+              <b>Téléphone :</b> +243 994889570
+              <br/>
+              <b>E-mail :</b> contact@uniluk.org
+            </p>
+            <div class="hero-actions" style="margin-top:14px">
+              <a class="btn" href="#">Télécharger le dossier </a>
+            </div>
+          </div>
+
+          <form class="card" onsubmit="event.preventDefault(); alert('Message envoyé (démo).');">
+            <h3>Envoyer un message</h3>
+            <div class="field" style="margin-top:10px">
+              <label for="nom">Nom complet</label>
+              <input id="nom" name="nom" required placeholder="Votre nom" />
+            </div>
+            <div class="field" style="margin-top:10px">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required placeholder="vous@exemple.com" />
+            </div>
+            <div class="field" style="margin-top:10px">
+              <label for="sujet">Sujet</label>
+              <input id="sujet" name="sujet" required placeholder="Admission, programmes, ..." />
+            </div>
+            <div class="field" style="margin-top:10px">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Écrivez votre demande..."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin-top:12px;width:100%">
+              Envoyer
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+</div>
+</div>
+
+<footer>
+<p>© 2026 UNILUK - Tous droits réservés</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

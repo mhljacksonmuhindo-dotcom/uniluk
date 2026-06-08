@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNILUK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    .topbar {
+      background: #0d4f8b;
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .container {
+      width: 1200px;
+      max-width: 95%;
+      margin: auto;
+    }
+
+    .topbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .social a {
+      color: #fff;
+      margin-left: 12px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .header {
+      background: #fff;
+      padding: 18px 0;
+      position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: #1f4d7a;
+      font-size: 22px;
+    }
+
+    .logo i {
+      font-size: 34px;
+      color: #0d4f8b;
+    }
+
+    .contact-boxes {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: #444;
+    }
+
+    .contact-item i {
+      color: #0d4f8b;
+      font-size: 18px;
+      margin-top: 3px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: #1a1a1a;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .navbar {
+      background: #0a4a86;
+      
+    }
+
+    .nav {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      padding: 14px 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 620px;
+      background: url('./grande.jpeg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 1200px;
+      max-width: 95%;
+      margin: auto;
+      padding: 80px 0;
+    }
+
+    .hero small {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: 72px;
+      line-height: 0.95;
+      font-weight: 900;
+      max-width: 700px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0d4f8b;
+      color: #fff;
+      padding: 12px 22px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+
+    .feature-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature {
+      background: rgba(0,0,0,0.65);
+      color: #fff;
+      padding: 28px 24px;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 95px;
+    }
+
+    .feature i {
+      font-size: 34px;
+      color: #1976d2;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .feature a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .courses {
+      background: #fff;
+      padding: 55px 0 70px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      background: #fff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .card p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    .card .btn {
+      padding: 10px 18px;
+      font-size: 12px;
+    }
+    footer{
+      background:#0d4f8b;
+  color: rgba(255, 255, 255, 0.86);
+  text-align: center;
+  padding: 26px 20px;
+  margin-top: 40px;
+    }
+
+    @media (max-width: 900px) {
+      .header-content,
+      .topbar-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .feature-bar,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .feature {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div>Rejoigner nous pour une pour une meilleur avenir</div>
+      <div class="social">
+        <a href="https://web.facebook.com/universiteAdeventistedeLukanga"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/uniluk1" ><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/uniluk1"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Uniluk\Lukanga</span>
+
+      </div>
+
+      <div class="contact-boxes">
+        <div class="contact-item">
+          <div class="icon"><span class="flaticon-clock"></span></div>
+              <div class="text">
+                <span>Lundi - Vendredi</span>
+                <strong>8:00-17:00</strong>
+              </div>
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <span>Appelez-Nous au</span>
+                <strong><a href="tel:+243994889570" >+243 994 889 570</a></strong>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <strong>NOTRE EMAIL</strong>
+            UNILUK@gmail.com
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Locatisation</strong>
+            RDC,Nord-kivu,lubero,lukanga
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul class="nav">
+        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="about.html"> A propos</a></li>
+        <li><a href="faculties.html">Facultés</a></li>
+        <li><a href="administration.html">Administration</a></li>
+        <li><a href="campus.html">Campus</a></li>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="instutition.html">Nos instutitions</a></li>
+        <li><a href="centre.html">Centre de recherche</a></li>
+        <li><a href="news.html">Actualités</a></li>
+        <li><a href="contact.html">Contacter nous</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="accrui">
+    <div class="hero-content">
+      <small>VEUX-TU UNE AIDE?</small>
+      <h1>BENVIENUE SUR NOTRE CAMPUS WALLAS</h1>
+      <a href="index.html" class="btn">Voir plus</a>
+    </div>
+
+    <div class="feature-bar">
+      <div class="feature">
+        <h3>pourquoi nous choisir</h3>
+        <i class="fa-solid fa-briefcase"></i>
+        <a href="about.html">en savoir plus </a>
+        
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-bus"></i>
+        <div>
+          <h3>VOYAGE  </h3>
+          <p>Uniluk possède un bus pour les transport commun butembo lukanga ,lukanga butembo</p>
+          <span>horaire mercredi 7H00 depart<span>14H30retour au bercail lukanga </span></span>
+        </div>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-user"></i>
+        <div>
+          <h3>Campus</h3>
+          <a href="campus.html">en savoir plus </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses">
+    <div class="container">
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Course 1">
+          <h3>Bibliotheque et resource humaine</h3>
+          <p>La bibliothèque universitaire joue un rôle essentiel dans le parcours académique des étudiants ainsi que dans les activités de recherche. L’université dispose de deux espaces documentaires complémentaires : une bibliothèque traditionnelle et une bibliothèque numérique. La bibliothèque traditionnelle met à la disposition des étudiants différents ouvrages, livres scientifiques, mémoires et documents de référence dans un environnement adapté aux études et à la concentration. De son côté, la bibliothèque numérique permet d’accéder en ligne aux ressources pédagogiques et scientifiques, offrant ainsi une consultation rapide et pratique des informations où que l’on se trouve. Grâce à ces deux structures, les étudiants bénéficient d’un meilleur accès au savoir et aux outils nécessaires pour leur réussite académique.</p>
+          <a href="#" class="btn">En sa voir plus</a>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Course 2">
+          <h3>Laboratoire informatique</h3>
+          <p>Le laboratoire informatique de l’université constitue un espace moderne dédié à l’apprentissage pratique et au développement des compétences numériques des étudiants. Il comprend un secrétariat chargé de l’organisation et de la gestion des activités du laboratoire. Ce laboratoire est équipé d’ordinateurs de bureau modernes et performants, permettant aux étudiants d’effectuer des travaux pratiques, des recherches ainsi que l’utilisation de différents logiciels informatiques dans de bonnes conditions. Grâce à ces équipements, les étudiants bénéficient d’un environnement favorable à l’apprentissage des technologies de l’information et au renforcement de leurs compétences pratiques</p>
+          <a href="#" class="btn">Savoir plus</a>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Course 3">
+          <h3>La telecomunication au sein du campus</h3>
+          <p>Du côté des télécommunications, l’université dispose d’une connexion Internet moderne grâce au réseau Wi-Fi Starlink. Cette technologie permet aux étudiants, enseignants et personnels administratifs de bénéficier d’un accès rapide et stable à Internet pour la recherche scientifique, les travaux académiques, les cours en ligne ainsi que la communication numérique. La présence du Wi-Fi Starlink contribue également à améliorer les activités pédagogiques et l’accès aux ressources numériques de l’université.</p>
+          <a href="#" class="btn">savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer>
+<p>© 2026 UNILUK - Tous droits réservés</p>
+</footer>
+</body>
+<script defer src="script.js"></script>
+</html>

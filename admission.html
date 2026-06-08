@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission - Campus UNILUK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<nav>
+
+<a href="index.html">Accueil</a>
+<a href="about.html">À propos</a>
+<a href="faculties.html">Facultés</a>
+<a href="administration.html">Administration</a>
+<a href="campus.html">Campus</a>
+<a href="admission.html">Admission</a>
+<a href="instutition.html">Nos instutitions</a>
+<a href="centre.html">Centre de recherche</a>
+<a href="news.html">Actualités</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+</header>
+
+<section class="hero page-hero">
+<div style="position:absolute;inset:0;background: linear-gradient(115deg, rgba(16, 35, 63, 0.88), rgba(15, 139, 141, 0.58)), url('./uniluk.jpeg') center/cover; z-index:-1;"></div>
+  <h1>Admission</h1>
+  <p>Université Adventiste de Lukanga</p>
+</section>
+
+<div class="container">
+  <div class="split">
+    <div class="panel">
+      <h2>Critères d’admission</h2>
+      <p>Les dossiers ci-dessous sont exigés pour toute demande d’admission à l’UNILUK.</p>
+      <ul class="list">
+        <li>Diplôme d’état </li>
+        <li>Bulletins scolaires </li>
+        <li>Photo passeport</li>
+        <li>Acte de naissance</li>
+        <li>Aptitudes physiques (examen/attestation)</li>
+        <li>Paiement des frais d’inscription (preuve obligatoire)</li>
+        <li>Choix de la faculté ou de la filière</li>
+      </ul>
+
+      <div style="margin-top: 22px" class="callout">
+        <div>
+          <h3 style="margin:0 0 8px;color:var(--white)">Préparez votre dossier</h3>
+          <p style="margin:0">Les documents doivent être lisibles et au format numérique (PDF/JPG/PNG).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel highlight-panel">
+      <h2>Formulaire de préinscription</h2>
+      <p>Remplissez le formulaire et joignez les pièces demandées. (Soumission simulée sans backend.)</p>
+
+      <form id="admissionForm" action="#" method="post" enctype="multipart/form-data" novalidate class="admission-form">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 14px;">
+          <label>
+            Nom
+            <input name="nom" type="text" placeholder="Votre nom" required />
+          </label>
+          <label>
+            Post-nom
+            <input name="postnom" type="text" placeholder="Votre post-nom" />
+          </label>
+          <label style="grid-column: span 2;">
+            Prénom(s)
+            <input name="prenoms" type="text" placeholder="Votre prénom(s)" required />
+          </label>
+        </div>
+
+        <label>
+          Date de naissance
+          <input name="dateNaissance" type="date" required />
+        </label>
+
+        <label>
+          Diplôme d’état 
+          <input name="diplomeEtat" type="file" accept="application/pdf,image/*" required />
+        </label>
+
+        <label>
+          Bulletins scolaires 
+          <input name="bulletins" type="file" accept="application/pdf,image/*" required />
+        </label>
+
+        <label>
+          Photo passeport 
+          <input name="photoPasseport" type="file" accept="image/*" required />
+        </label>
+
+        <label>
+          Acte de naissance 
+          <input name="acteNaissance" type="file" accept="application/pdf,image/*" required />
+        </label>
+
+        <fieldset style="border: 1px solid rgba(255,255,255,0.28); border-radius: 8px; padding: 14px;">
+          <legend style="padding:0 10px;color:rgba(255,255,255,0.92);font-weight:900;">Aptitudes physiques</legend>
+          <label style="display:flex; gap:10px; align-items:center; color: rgba(255,255,255,0.9);">
+            <input type="checkbox" name="aptitudes" required />
+            J’atteste avoir une attestation/évaluation des aptitudes physiques.
+          </label>
+          <label style="margin-top: 10px;">
+            (Optionnel) Justificatif d’aptitudes
+            <input name="aptitudesJustificatif" type="file" accept="application/pdf,image/*" />
+          </label>
+        </fieldset>
+
+        <fieldset style="border: 1px solid rgba(255,255,255,0.28); border-radius: 8px; padding: 14px;">
+          <legend style="padding:0 10px;color:rgba(255,255,255,0.92);font-weight:900;">Paiement des frais d’inscription</legend>
+          <label style="display:flex; gap:10px; align-items:center; color: rgba(255,255,255,0.9);">
+            <input type="checkbox" name="paiement" required />
+            J’ai effectué le paiement des frais d’inscription.
+          </label>
+          <label style="margin-top: 10px;">
+            (Obligatoire) Preuve de paiement
+            <input name="preuvePaiement" type="file" accept="application/pdf,image/*" required />
+          </label>
+        </fieldset>
+
+        <div class="grid" style="grid-template-columns:0.2fr 0.2fr ; gap: 10px;">
+          <label>
+            Choix de la faculté
+            <select name="faculte" required>
+              <option value="" selected disabled>-- Sélectionnez --</option>
+              <option value="Faculté des Sciences et Technologies">Faculté des Sciences et Technologies</option>
+              <option value="Faculté de Médecine">Faculté de Médecine</option>
+              <option value="Faculté des Lettres et Sciences Humaines">Faculté des Lettres et Sciences Humaines</option>
+              <option value="Faculté des Sciences Économiques">Faculté des Sciences Économiques</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </label>
+        <div style="display:flex; gap: 12px; margin-top: 4px; flex-wrap: wrap;">
+          <button type="submit" class="btn">Envoyer ma demande</button>
+          <button type="reset" class="btn secondary">Effacer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+<p>© 2026 UNILUK - Tous droits réservés</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
